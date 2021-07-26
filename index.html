@@ -15,8 +15,16 @@
             <textarea id="textTask"></textarea>
         </div>
         <div>
-            <button class="btn-successs">Guardar</button>
+            <button onclick="taskManager.add()" class="btn-successs">Guardar</button>
         </div>
     </div>
+
+    <div id="divTask">
+
+    </div>
 </body>
+
+<script>
+    let taskManager = new TaskManager(document.getElementById("divTask"), document.getElementById("textTask"));
+</script>
 </html>
