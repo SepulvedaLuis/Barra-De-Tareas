@@ -1,5 +1,5 @@
-class tasKManager {
-    task = [];
+class TaskManager {
+    tasks = [];
     lastId = 0;
     tagTasks = null;
     tagText = null;
@@ -10,6 +10,16 @@ class tasKManager {
         
         this.tagTasks = tagTasks;
         this.tagText = tagText;
+        // console.log("Hola existo");
+    }
 
+    add(){
+        this.lastId++;
+        this.tasks.push({id: this.lastId, text: this.tagText.value});
+        
+        localStorage.setItem(this.nameLabelStorage, JSON.stringify(this.tasks));
+
+        console.log("Estamos funcionando");
+        console.log(this.tasks);
     }
 }
